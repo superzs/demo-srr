@@ -1,0 +1,9 @@
+server:
+   port: 9000 #指定该Eureka实例的端口
+eureka：
+   client：
+      registerWithEureka: false #是否将自己的服务注册到Eureka server上
+      fetchRegistry: false #是否从Eureka server上获取注册信息
+      #Eureka server的访问地址，服务注册和client获取服务注册
+      serviceUrl:
+         defaultZone: http://localhost:${server.port}/eureka/
